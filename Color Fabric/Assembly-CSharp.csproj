@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\calculette.cs" />
     <Compile Include="Assets\Scripts\TouchInput.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/ST_LUC/_BLOC3_S2/STAGES/Production/Caramel_Games/CaramelGame01/Color-Fabric/Color Fabric/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

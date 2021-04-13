@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CalculManager.cs" />
+    <None Include="Assets\Ressources\Fonts\Scada\OFL.txt" />
+    <None Include="Assets\Ressources\Fonts\Hind_Madurai\OFL.txt" />
+    <None Include="Assets\Ressources\Fonts\Mali\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/ST_LUC/_BLOC3_S2/STAGES/Production/Caramel_Games/CaramelGame01/Color-Fabric/Color Fabric/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

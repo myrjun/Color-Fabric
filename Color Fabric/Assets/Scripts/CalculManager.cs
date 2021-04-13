@@ -8,18 +8,20 @@ public class CalculManager : MonoBehaviour
 {
     public int CurrentButtonNumber;
 
+    public GameObject Final;
     public Canvas InterfaceJeu;
-    public Canvas Final;
     public GameObject[] Levels;
     public GameObject CalculOnScreen;
     public Text CalculValueOnScreen;
+    public string[] Calculs;
 
     private int n = 0;
 
-    public GameObject ImageJeu;
+    //public Image ImageJeu;
+    //public Image ImgCanva;
     public Sprite[] Images;
-
-    public string[] Calculs;
+    public SpriteRenderer spriteRenderer;
+    public GameObject ImgObject;
 
     private bool IsLevelComplete;
     private int InterfaceNumber;
@@ -30,6 +32,7 @@ public class CalculManager : MonoBehaviour
         IsLevelComplete = false;
         CalculValueOnScreen = CalculOnScreen.GetComponent<Text>();
         CalculValueOnScreen.text = Calculs[0];
+        
     }
 
     public void DisplayResult()
@@ -42,27 +45,30 @@ public class CalculManager : MonoBehaviour
 
     public void CanvaChange()
     {
-        Debug.Log(n + "n");
+
         if (IsLevelComplete == true)
         {
-
             Levels[n].SetActive(false);
-            if (n <= 4)
+            if (n <= 5)
             {
                 n++;
             }
+            
             Levels[n].SetActive(true);
+            spriteRenderer.sprite = Images[n];
 
-            Debug.Log(n + "n");
             IsLevelComplete = false;
             CalculValueOnScreen.text = Calculs[n];
 
-        }
 
-        if (n == 5)
-        {
-            Final.enabled = true;
-            InterfaceJeu.enabled = false;
+            if (n == 5)
+            {
+                Levels[5].SetActive(false);
+                Final.SetActive(true);
+                CalculOnScreen.SetActive(false);
+                ImgObject.SetActive(false);
+            }
+
         }
 
     }

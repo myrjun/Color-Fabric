@@ -17,7 +17,7 @@ public class CalculManager : MonoBehaviour
 
     private int n = 0;
 
-    //public Image ImageJeu;
+    public Image ImageJeu;
     //public Image ImgCanva;
     public Sprite[] Images;
     public SpriteRenderer spriteRenderer;
@@ -55,7 +55,7 @@ public class CalculManager : MonoBehaviour
             }
             
             Levels[n].SetActive(true);
-            spriteRenderer.sprite = Images[n];
+            ImageJeu.GetComponent<Image>().sprite = Images[n];
 
             IsLevelComplete = false;
             CalculValueOnScreen.text = Calculs[n];
@@ -66,7 +66,7 @@ public class CalculManager : MonoBehaviour
                 Levels[5].SetActive(false);
                 Final.SetActive(true);
                 CalculOnScreen.SetActive(false);
-                ImgObject.SetActive(false);
+                //ImgObject.enabled(false);
             }
 
         }

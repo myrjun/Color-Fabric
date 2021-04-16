@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Mainmenu : MonoBehaviour
 {
-    public GameObject Panel;
+    public GameObject Menu;
     public GameObject Canvas;
     bool Menuactive = true;
-   
+
+    private void Start()
+    {
+        Menu.SetActive(true);
+        Canvas.SetActive(false);
+    }
+
     void Update()
     {
 
@@ -30,12 +36,12 @@ public class Mainmenu : MonoBehaviour
     {
         if (Menuactive == true)
         {          
-            Panel.SetActive(true);
+            Menu.SetActive(true);
             Canvas.SetActive(false);
 
         } else if (Menuactive == false)
         {
-            Panel.SetActive(false);
+            Menu.SetActive(false);
             Canvas.SetActive(true);
         }
 
